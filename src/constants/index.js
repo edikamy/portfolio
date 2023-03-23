@@ -22,7 +22,6 @@ import {
   radinhamkaran,
   sarrafEx,
   dggold,
-  tripguide,
   threejs,
   antdesign,
   cypress,
@@ -35,6 +34,7 @@ import {
   sonarqube,
   vite,
   webpack,
+  designwidget,
 } from "../assets";
 
 export const navLinks = [
@@ -320,27 +320,28 @@ const projects = [
     source_code_link:
       "https://steprimo.com/android/us/download/Y29tLmRnZ29sZA==/ZTM1Y2Y2MDI3OGI5YjI3NTEyZDNkNjQzOTBmZTM0OTk=/",
   },
-  // {
-  //   name: "Trip Guide",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: tripguide,
-  //   source_code_link: "https://github.com/",
-  // },
+  {
+    name: "Design Status",
+    description:
+      "Design status is a figma widget for help designers to manage team works easily.",
+    tags: [
+      {
+        name: "figma",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "widget",
+        color: "green-text-gradient",
+      },
+      {
+        name: "plugin",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: designwidget,
+    source_code_link:
+      "https://www.figma.com/community/widget/1123950002398142129/Design-Status/",
+  },
 ];
 
 export { services, technologies, experiences, testimonials, projects };

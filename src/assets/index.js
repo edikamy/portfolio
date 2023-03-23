@@ -41,7 +41,7 @@ import radinhamkaran from "./company/radinhamkaran.png";
 
 import sarrafEx from "./sarrafEx.png";
 import dggold from "./dggold.png";
-import tripguide from "./tripguide.png";
+import designwidget from "./design-widget.png";
 
 export {
   logo,
@@ -83,6 +83,6 @@ export {
   radinhamkaran,
   sarrafEx,
   dggold,
-  tripguide,
+  designwidget,
   link,
 };
