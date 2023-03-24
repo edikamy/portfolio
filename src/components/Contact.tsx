@@ -6,9 +6,10 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { figma, linkedin } from "../assets";
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef<any>();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -17,7 +18,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { target } = e;
     const { name, value } = target;
 
@@ -27,7 +28,7 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setLoading(true);
 
@@ -74,7 +75,17 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
-
+        <div className="flex gap-2">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/kambiz-baghie-177224b3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDZjw%2BLeURhu73HZdSsd1EA%3D%3D"
+          >
+            <img className="w-8 h-8" src={linkedin} />
+          </a>
+          <a target="_blank" href="https://www.figma.com/@kambizbaghie">
+            <img className="w-8 h-8" src={figma} />
+          </a>
+        </div>
         <form
           ref={formRef}
           onSubmit={handleSubmit}

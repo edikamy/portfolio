@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -11,8 +11,13 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { IExperience } from "../constants/types";
 
-const ExperienceCard = ({ experience }) => {
+interface IExperienceCard {
+  experience: IExperience;
+}
+
+const ExperienceCard: FC<IExperienceCard> = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{

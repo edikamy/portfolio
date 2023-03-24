@@ -1,43 +1,51 @@
 import {
-  mobile,
+  antdesign,
+  aranuma,
   backend,
   creator,
-  web,
-  javascript,
-  typescript,
-  html,
   css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  aranuma,
-  hastibazar,
-  inchand,
-  queensite,
-  radinhamkaran,
-  sarrafEx,
-  dggold,
-  threejs,
-  antdesign,
   cypress,
+  designwidget,
+  dggold,
+  docker,
   emotion,
+  figma,
+  git,
+  hastibazar,
+  html,
+  inchand,
+  javascript,
   jest,
   jira,
   materialui,
+  mobile,
+  mongodb,
+  nodejs,
   nx,
+  queensite,
+  radinhamkaran,
+  reactjs,
   reactquery,
+  redux,
+  sarrafEx,
   sonarqube,
+  tailwind,
+  threejs,
+  typescript,
   vite,
+  web,
   webpack,
-  designwidget,
 } from "../assets";
+import type {
+  IExperience,
+  INavLink,
+  IProject,
+  IService,
+  ITechnology,
+  ITestimonial,
+} from "./types";
 
-export const navLinks = [
+export const navLinks: INavLink[] = [
   {
     id: "about",
     title: "About",
@@ -52,7 +60,7 @@ export const navLinks = [
   },
 ];
 
-const services = [
+const services: IService[] = [
   {
     title: "Web Developer",
     icon: web,
@@ -71,7 +79,7 @@ const services = [
   },
 ];
 
-const technologies = [
+const technologies: ITechnology[] = [
   {
     name: "Html 5",
     icon: html,
@@ -170,7 +178,7 @@ const technologies = [
   },
 ];
 
-const experiences = [
+const experiences: IExperience[] = [
   {
     title: "Front End Team Leader",
     company_name: "Queen-site",
@@ -248,7 +256,16 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+const testimonials: ITestimonial[] = [
+  {
+    testimonial:
+      "Only a few lucky people have the pleasure to work with someone like Kambiz. He filled the role of Lead Front-end Developer like an expert more than three years for my company’s high-end product development team. I was always impressed by Kambiz’s dedication, his skills to find an out of the box solution, deal with everyone in the team and think along with the business. He knew how to motivate the team to take ownership and to leave daily stand-up’s with a smile. It's always a privilege to work with you Kambiz.",
+    name: "Reza Safari",
+    designation: "Business Owner",
+    company: "Queensite",
+    image:
+      "https://media.licdn.com/dms/image/D4D03AQHBtSQlSU4ZaA/profile-displayphoto-shrink_100_100/0/1633795071711?e=1684972800&v=beta&t=W7ZwzNC0Nf7PG6z87svVNOikm1Px7T5Y-MaMKpAanYc",
+  },
   {
     testimonial:
       "Kambiz is one of the most moral and knowledgeable people I know. In working with Kambiz, you will learn to be a professional. every single moment I have worked with Kambiz will remain in my mind. I learned many things from him, leadership and problem solving are the best ones. Worked with him is one of the best my chances in my work life.",
@@ -260,14 +277,6 @@ const testimonials = [
   },
   // {
   //   testimonial:
-  //     "I've never met a web developer who truly cares about their clients' success like Rick does.",
-  //   name: "Chris Brown",
-  //   designation: "COO",
-  //   company: "DEF Corp",
-  //   image: "https://randomuser.me/api/portraits/men/5.jpg",
-  // },
-  // {
-  //   testimonial:
   //     "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
   //   name: "Lisa Wang",
   //   designation: "CTO",
@@ -276,7 +285,7 @@ const testimonials = [
   // },
 ];
 
-const projects = [
+const projects: IProject[] = [
   {
     name: "SarrafEx",
     description:
@@ -344,4 +353,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { experiences, projects, services, technologies, testimonials };

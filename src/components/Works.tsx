@@ -1,14 +1,15 @@
-import React from "react";
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
+import { FC } from "react";
+import Tilt from "react-tilt";
 
-import { styles } from "../styles";
 import { link } from "../assets";
-import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { IProject } from "../constants/types";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({
+const ProjectCard: FC<IProject & { index: number }> = ({
   index,
   name,
   description,

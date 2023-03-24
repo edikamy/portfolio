@@ -14,6 +14,7 @@ import cypress from "./tech/cypress.png";
 import docker from "./tech/docker.png";
 import emotion from "./tech/emotion.png";
 import figma from "./tech/figma.png";
+import linkedin from "./tech/linkedin.svg";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -58,6 +59,7 @@ export {
   docker,
   emotion,
   figma,
+  linkedin,
   git,
   html,
   javascript,
