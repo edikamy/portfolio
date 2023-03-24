@@ -1,10 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './core/firebase'
+import './index.css'
 
-ReactDOM.createRoot(document.getElementById("root") as any).render(
+ReactDOM.createRoot(document.getElementById('root') as any).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)
