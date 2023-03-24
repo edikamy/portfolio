@@ -4039,4 +4039,4 @@ No matching component was found for:
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */Wo($Q,eZ,"app");const tZ={apiKey:"AIzaSyAbfnS84hp-SVsUkSb8N9If1_dpur6Pjj0",authDomain:"portfolio-42640.firebaseapp.com",projectId:"portfolio-42640",storageBucket:"portfolio-42640.appspot.com",messagingSenderId:"353336093922",appId:"1:353336093922:web:0c0dfb720cb648f623c2bb",measurementId:"G-T2XCBW31W7"},nZ=OL(tZ);YQ(nZ);ux.createRoot(document.getElementById("root")).render(me(wg.StrictMode,{children:me(fK,{})}));
+ */Wo($Q,eZ,"app");const tZ={apiKey:"AIzaSyAbfnS84hp-SVsUkSb8N9If1_dpur6Pjj0",authDomain:"portfolio-42640.firebaseapp.com",projectId:"portfolio-42640",storageBucket:"portfolio-42640.appspot.com",messagingSenderId:"353336093922",appId:"1:353336093922:web:0c0dfb720cb648f623c2bb",measurementId:"G-T2XCBW31W7"},nZ=OL(tZ),iZ=YQ(nZ);iZ.app.automaticDataCollectionEnabled;ux.createRoot(document.getElementById("root")).render(me(wg.StrictMode,{children:me(fK,{})}));
