@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "yarn typecheck && vite build",
     "preview": "vite preview",
-    "deploy": "yarn build && yarn gh-pages -d dist",
-    "typecheck": "tsc --project tsconfig.json --pretty --noEmit"
+    "typecheck": "tsc --project tsconfig.json --pretty --noEmit",
+    "deploy": "yarn build && yarn gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
