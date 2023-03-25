@@ -1,21 +1,17 @@
-import React, { FC } from "react";
-import Tilt from "react-tilt";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
+import { FC } from 'react'
+import Tilt from 'react-tilt'
 
-import { styles } from "../styles";
-import { services } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { IService } from "../constants/types";
+import { services } from '../constants'
+import { IService } from '../constants/types'
+import { SectionWrapper } from '../hoc'
+import { styles } from '../styles'
+import { fadeIn, textVariant } from '../utils/motion'
 
-const ServiceCard: FC<IService & { index: number }> = ({
-  index,
-  title,
-  icon,
-}) => (
+const ServiceCard: FC<IService & { index: number }> = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div
@@ -27,19 +23,13 @@ const ServiceCard: FC<IService & { index: number }> = ({
         }}
         className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
+        <img src={icon} alt="web-development" className="w-16 h-16 object-contain" />
 
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
+        <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
       </div>
     </motion.div>
   </Tilt>
-);
+)
 
 const About = () => {
   return (
@@ -50,18 +40,16 @@ const About = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
+        variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a Frontend specialist with over 5 years of experience in the IT
-        industry. My skills include designing and developing web and mobile
-        applications using React and React Native, as well as designing user
-        interfaces and user experiences. Throughout these years, I have been
-        able to serve as a good liaison between Front teams and design, and form
-        effective and coordinated teams to carry out large projects.
-        Additionally, with the ability to manage and coordinate large and small
-        teams using Agile and Scrum methodologies, I have formed effective and
-        coordinated teams for carrying out large projects.
+        I am a Frontend specialist with over 8 years of experience in the IT industry. My skills
+        include designing and developing web and mobile applications using React and React Native,
+        as well as designing user interfaces and user experiences. Throughout these years, I have
+        been able to serve as a good liaison between Front teams and design, and form effective and
+        coordinated teams to carry out large projects. Additionally, with the ability to manage and
+        coordinate large and small teams using Agile and Scrum methodologies, I have formed
+        effective and coordinated teams for carrying out large projects.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
@@ -70,7 +58,7 @@ const About = () => {
         ))}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(About, 'about')
