@@ -8,7 +8,7 @@ import { textVariant } from '../utils/motion'
 const Tech = () => {
   return (
     <div>
-      <div className={`min-h-[180px]`}>
+      <div className={`xs:min-h-[140px] sm:min-h-[180px]`}>
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>What technologies do I know?</p>
           <h2 className={styles.sectionHeadText}>Skills.</h2>
@@ -16,7 +16,7 @@ const Tech = () => {
       </div>
       <div className={`flex flex-wrap gap-7`}>
         {technologies.map((technology) => (
-          <div key={technology.name}>
+          <div className="flex-1 flex items-center justify-center" key={technology.name}>
             <Tooltip message={technology.name}>
               <img className="w-[112px] h-[112px]" src={technology.icon} />
               {/* <BallCanvas icon={technology.icon} /> */}

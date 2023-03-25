@@ -41,7 +41,7 @@ const ExperienceCard: FC<IExperienceCard> = ({ experience }) => {
         <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
           {experience.company_name}
         </p>
-        <p className="text-secondary !text-[12px]" style={{ margin: 0 }}>
+        <p className="text-secondary !text-[14px]" style={{ margin: 0 }}>
           {experience.description}
         </p>
       </div>
