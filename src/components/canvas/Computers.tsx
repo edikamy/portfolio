@@ -62,7 +62,17 @@ const ComputersCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+        <OrbitControls
+          enableZoom
+          minZoom={1}
+          maxZoom={5}
+          enablePan
+          autoRotate
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+          autoRotateSpeed={0.5}
+          rotateSpeed={0.7}
+        />
         <Computers isMobile={isMobile} />
       </Suspense>
 
