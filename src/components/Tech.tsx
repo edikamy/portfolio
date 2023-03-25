@@ -1,23 +1,43 @@
-import React from "react";
-
-import { BallCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { technologies } from "../constants";
-import { Tooltip } from ".";
+import { motion } from 'framer-motion'
+import { Tooltip } from '.'
+import { technologies } from '../constants'
+import { SectionWrapper } from '../hoc'
+import { styles } from '../styles'
+import { textVariant } from '../utils/motion'
 
 const Tech = () => {
   return (
+    <div>
+      <div className={`min-h-[180px]`}>
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>What technologies do I know?</p>
+          <h2 className={styles.sectionHeadText}>Skills.</h2>
+        </motion.div>
+      </div>
+      <div className={`flex flex-wrap gap-7`}>
+        {technologies.map((technology) => (
+          <div key={technology.name}>
+            <Tooltip message={technology.name}>
+              <img className="w-[112px] h-[112px]" src={technology.icon} />
+              {/* <BallCanvas icon={technology.icon} /> */}
+            </Tooltip>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+  return (
     <div className="flex flex-row flex-wrap justify-center gap-16">
       {technologies.map((technology) => (
-        <div className="w-20 h-20" key={technology.name}>
+        <div key={technology.name}>
           <Tooltip message={technology.name}>
-            <img src={technology.icon} />
+            <img className="w-[112px] h-[112px]" src={technology.icon} />
             {/* <BallCanvas icon={technology.icon} /> */}
           </Tooltip>
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default SectionWrapper(Tech, "");
+export default SectionWrapper(Tech, '')

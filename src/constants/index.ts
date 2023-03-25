@@ -175,7 +175,8 @@ const experiences: IExperience[] = [
   {
     title: 'Front End Team Leader',
     company_name: 'Queen-site',
-    description: 'Flower commerce website',
+    description:
+      'A European software house specialized in web-based standard and custom-made software development with its headquarter in the Netherlands, a branch office in Sofia, and employee’s located in several countries.They build products for the European and northern American markets according to these regions quality, security, and privacy standards and regulations.',
     icon: queensite,
     iconBg: '#eee',
     date: 'May 2020 - Present',
@@ -193,12 +194,14 @@ const experiences: IExperience[] = [
   {
     title: 'Front End Team Lead',
     company_name: 'Hasti Innovative Trading (HIT)',
-    description: 'E-commerce website',
+    description:
+      'A subsidiary of Golrang Industrial Group active in the eCommerce Industry. They are committed to developing a platform that is dedicated to facilizing selling and buying products that empower people to do business as well as, creating a new intelligent marketplace.',
     icon: hastibazar,
     iconBg: '#eee',
     date: 'April 2022 - October 2022',
     link: 'http://www.hasti.co/',
     points: [
+      'Providing advice for setting up Frontend Team',
       'Build infrastructure and work on e-commerce, admin panel, and vendor panel projects using NextJS Redux Rtk-Query Material UI, In addition to building the infrastructure for all projects on NX monorepo and some libraries',
       'Coached five front-end teams in agile methodologies.',
     ],
@@ -221,7 +224,7 @@ const experiences: IExperience[] = [
   {
     title: 'Front End Developer',
     company_name: 'Inchand',
-    description: 'E-commerce website',
+    description: 'An E-commerce marketplace website',
     icon: inchand,
     iconBg: '#eee',
     date: 'October 2018 - March 2019',
@@ -235,15 +238,18 @@ const experiences: IExperience[] = [
   {
     title: 'IT Manager',
     company_name: 'Radin Hamkaran Behta',
-    description: 'a General Contractor, worked on BIM (Building information technology)',
+    description: 'A General Contractor, worked on BIM (Building information technology)',
     icon: radinhamkaran,
     iconBg: '#eee',
     date: 'August 2015 - September 2018',
     link: 'https://radinhamkaran.com/',
     points: [
-      'Manage it team',
+      'Manage IT department',
       'Build some PHP websites for internal uses of the company',
       'Work with Unity and Unreal engin to generate building 3D model in app.',
+      'SEO and Web Analyze news website',
+      'Worked on some skills like: create portals with MVC - use SQL - MySql and so on',
+      'Worked Augmented reality with Microsoft Hololens and create Virtual reality game with Unity for Htc Vive',
     ],
   },
 ]
@@ -260,6 +266,15 @@ const testimonials: ITestimonial[] = [
   },
   {
     testimonial:
+      'Kambiz is an excellent resource, and a master at front-end programming has been a real gem to our team. He makes sure all the deadlines meet and that also with He is a hardworking and dedicated person who will complete your project in a given time frame. I would recommend and endorse Kambiz.',
+    name: 'Mehdi Panahi',
+    designation: 'CTO',
+    company: 'Aranuma',
+    image:
+      'https://media.licdn.com/dms/image/C4E03AQG0L62s1sjVaQ/profile-displayphoto-shrink_100_100/0/1634480823318?e=1684972800&v=beta&t=va1-dOOmTMCbr9My2mW0fXgXsTlDqdgZZWOIutAhG9I',
+  },
+  {
+    testimonial:
       'Kambiz is one of the most moral and knowledgeable people I know. In working with Kambiz, you will learn to be a professional. every single moment I have worked with Kambiz will remain in my mind. I learned many things from him, leadership and problem solving are the best ones. Worked with him is one of the best my chances in my work life.',
     name: 'Hannan Ebrahimi Sotoudeh',
     designation: 'Software Developer',
@@ -267,14 +282,6 @@ const testimonials: ITestimonial[] = [
     image:
       'https://media.licdn.com/dms/image/D4E03AQG0-z95hYKvBA/profile-displayphoto-shrink_100_100/0/1670238764707?e=1684972800&v=beta&t=53PZQQYGm5GLSGAIbuky-WEcLO3C6UfIiU7mnl6KZbo',
   },
-  // {
-  //   testimonial:
-  //     "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-  //   name: "Lisa Wang",
-  //   designation: "CTO",
-  //   company: "456 Enterprises",
-  //   image: "https://randomuser.me/api/portraits/women/6.jpg",
-  // },
 ]
 
 const projects: IProject[] = [
