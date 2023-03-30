@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 // https://vitejs.dev/config/
@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/portfolio/',
   plugins: [
     react(),
+    splitVendorChunkPlugin(),
     ViteImageOptimizer({
       png: { quality: 70, compressionLevel: 9 },
       jpeg: { quality: 70, compressionLevel: 9 },

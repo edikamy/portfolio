@@ -192,7 +192,7 @@ const experiences: IExperience[] = [
     ],
   },
   {
-    title: 'Front End Team Lead',
+    title: 'Front End Mentor and Consultant',
     company_name: 'Hasti Innovative Trading (HIT)',
     description:
       'A subsidiary of Golrang Industrial Group active in the eCommerce Industry. They are committed to developing a platform that is dedicated to facilizing selling and buying products that empower people to do business as well as, creating a new intelligent marketplace.',
@@ -330,7 +330,8 @@ const projects: IProject[] = [
   },
   {
     name: 'Design Status',
-    description: 'Design status is a figma widget for help designers to manage team works easily.',
+    description:
+      'The "Design Status" widget in Figma assists design teams in presenting and monitoring the progress of their projects in a clear and understandable manner. With this widget, you can provide project management to design teams in the best possible way, assigning different tasks to each team member. Ultimately, this tool helps design teams to quickly achieve desirable results in managing their projects.',
     tags: [
       {
         name: 'figma',
