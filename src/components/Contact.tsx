@@ -1,36 +1,36 @@
-import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import emailjs from '@emailjs/browser'
+import { motion } from 'framer-motion'
+import { useRef, useState } from 'react'
 
-import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-import { figma, linkedin } from "../assets";
+import { figma, linkedin, skype } from '../assets'
+import { SectionWrapper } from '../hoc'
+import { styles } from '../styles'
+import { slideIn } from '../utils/motion'
+import { EarthCanvas } from './canvas'
 
 const Contact = () => {
-  const formRef = useRef<any>();
+  const formRef = useRef<any>()
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+    name: '',
+    email: '',
+    message: '',
+  })
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e: any) => {
-    const { target } = e;
-    const { name, value } = target;
+    const { target } = e
+    const { name, value } = target
 
     setForm({
       ...form,
       [name]: value,
-    });
-  };
+    })
+  }
 
   const handleSubmit = (e: any) => {
-    e.preventDefault();
-    setLoading(true);
+    e.preventDefault()
+    setLoading(true)
 
     emailjs
       .send(
@@ -38,39 +38,37 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Front-end Engineer",
+          to_name: 'Front-end Engineer',
           from_email: form.email,
-          to_email: "kambiz.baghie@gmail.com",
+          to_email: 'kambiz.baghie@gmail.com',
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          setLoading(false)
+          alert('Thank you. I will get back to you as soon as possible.')
 
           setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
+            name: '',
+            email: '',
+            message: '',
+          })
         },
         (error) => {
-          setLoading(false);
-          console.error(error);
+          setLoading(false)
+          console.error(error)
 
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
-  };
+          alert('Ahh, something went wrong. Please try again.')
+        },
+      )
+  }
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
+        variants={slideIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
@@ -85,12 +83,11 @@ const Contact = () => {
           <a target="_blank" href="https://www.figma.com/@kambizbaghie">
             <img className="w-8 h-8" src={figma} />
           </a>
+          <a target="_blank" href="https://join.skype.com/invite/gwReWYgo0ffg">
+            <img className="w-8 h-8" src={skype} />
+          </a>
         </div>
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
+        <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
@@ -129,19 +126,19 @@ const Contact = () => {
             type="submit"
             className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
       </motion.div>
 
       <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
+        variants={slideIn('right', 'tween', 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, 'contact')
